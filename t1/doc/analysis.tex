@@ -1,0 +1,87 @@
+\section{Análise Teórica}
+\label{sec:analise_teorica}
+Análise do circuito utilizando 2 processos teóricos: método das malhas e método do nós.
+\subsection{Método das Malhas} 
+
+Foram criadas 4 variáveis para a aplicação do método das malhas, a correntes das malhas. Esta variáveis estão identificadas pelas letras IA, IB,IC e ID, na figura apresentada abaixo, onde também podem ser observados os sentidos utilizados. Sabendo os valores destas correntes e aplicando a lei de Ohm, são calculados os valores das correntes em cada um dos componentes e as tensões nos nós. Para determinar as 4 correntes das malhas, foram utilizadas as equações apresentadas abaixo, que foram resolvidas com o auxílio do Octave. 
+
+\begin {equation}
+	R1xIA + R3x(IA+IB) + R4x(IA+IC) = Va
+	\label{eq:malha1}
+\end{equation}
+
+\begin {equation}
+	R6xIA + R7xIC + R4x(IC+IA) = KcxIC
+	\label{eq:malha2}
+\end{equation}
+
+\begin {equation}
+	IB = KbxR3(IA+IB)
+	\label{eq:malha3}
+\end{equation}
+
+\begin {equation}
+	ID = Id
+	\label{eq:malha4}
+\end{equation}
+
+
+\subsection{Método dos Nós} 
+
+Na aplicação do método dos nós foram considerados 9 nós, ou seja foi adicionada uma fonte de corrente fictícia o nó 7 e a resistência 6, criando assim mais um nó. Isto, porque na simulação feita no Ngspice era necessário definir a corrente sobre a qual a fonte de tensão Vc depende. Para haver uma coerência entre as 2 análises, manteve-se esta fonte fictícia. Obtêm-se então 9 equações, 5 diretamente obtidas aplicando a Lei de Kirchoff para as correntes (KCL) em cada um dos nós não ligados a fontes de corrente, 2 obtidas fazendo a diferença potencial entre os terminais das fontes de tensão e, por fim, 2 definindo a voltagem no nó 0 como nula e igualando as voltagens V8 e V7. As equações são as seguintes:\par
+
+
+\begin {equation}
+	V0 = 0
+	\label{eq1}
+\end{equation}
+\begin {equation}
+	V8 = V7
+	\label{eqn}
+\end{equation}
+\begin {equation}
+	\frac{V2-V4}{R3} + \frac{V2-V3}{R2} + \frac{V2-V1}{R1} = 0
+	\label{eq4}
+\end{equation}
+\begin {equation}
+	\frac{V1-V2}{R1} + \frac{V0 - V8}{R6} + \frac{V0 - V4}{R4} = 0
+	\label{eq3}
+\end{equation}
+\begin {equation}
+	\frac{V5-V4}{R5} + Kb(V2-V4) = Id
+	\label{eq6}
+
+\end{equation}
+\begin {equation}
+	\frac{V7-V6}{R7} + \frac{V7 - V0}{R6} = 0
+	\label{eq7}
+\end{equation}
+\begin {equation}
+	\frac{V3-V2}{R2} = Kb(V2-V4) 
+	\label{eq5}
+\end{equation}
+\begin {equation}
+	V1 - V0 = Va
+	\label{eq8}
+\end{equation}
+\begin {equation}
+	V4 - V6 = Kc \frac{V0 - V7}{R6}
+	\label{eq9}
+\end{equation}
+
+Os valores obtidos para as correntes em cada um dos componentes e para as voltagens em cada um dos nós estão representados na seguinte tabela:
+ \pagebreak 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|r|}
+    \hline    
+    {\bf Nome} & {\bf Método das Malhas} & {\bf Métodos dos Nós}\\ \hline
+    \input{final_table}
+  \end{tabular}
+  \caption{As variáveis que representam correntes estão precedidadas pelo simbolo @ e expressas em miliampere (mA); As restantes variáveis representam tensões e estão expressas em Volt (V)}
+  \label{tab:valores_teoricos}
+\end{table}
+
+Pode verificar-se resultados exatamente iguais entre os 2 métodos, tal como esperado.
+
+

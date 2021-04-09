@@ -1,0 +1,18 @@
+\section{Análise Ngspice}
+\label{sec:simulacao}
+Análise do circuito utilizando o programa Ngspice.
+\subsection{Análise do Ponto de Operação}
+\textbf Como mencionado na secção anterior, teve de ser criada uma fonte de tensão fictícia entre o nó 7 e a resistência 6 de valor nulo. A razão já foi mencionada anteriormente e deve-se apenas ao funcionamento do programa. Na tabela representada abaixo, podem ser observados os resultados obtidos na simulação.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Nome} & {\bf Valores (mA or V)} \\ \hline
+    \input{op_tab}
+  \end{tabular}
+  \caption{Ponto de operação. As variáveis que representam correntes estão precedidadas pelo simbolo @ e expressas em miliampere (mA); As restantes variáveis representam tensões e estão expressas em Volt (V)}
+  \label{tab:op}
+\end{table}
+
+Pode ser observado que os valores obtidos coincidem com total precisão com os valores obtidos utilizando os métodos teóricos.
