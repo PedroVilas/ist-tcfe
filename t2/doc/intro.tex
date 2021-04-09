@@ -1,0 +1,42 @@
+\section{Introduction}
+\label{sec:introduction}
+% state the learning objective
+
+In this laboratory assignment our objective is to study  the circuit represented in \textbf{Figure~\ref{fig:circuit_t2}}, a circuit containing a capacitor and a sinusoidal voltage source $v_s$ which will be our main focus.
+
+\begin{figure}[h] \centering
+\includegraphics[width=0.6\linewidth]{circuit_t2.pdf}
+\caption{Circuit in study}
+\label{fig:circuit_t2}
+\end{figure}
+
+
+\par In this circuit, as we can see, we also have a linearly dependent voltage and current source. The circuit also contains 7 resistors.
+We have 8 nodes numbered from 0 to 8 arbitrarily, and it was considered that {\it node 0} was the ground node. The voltage-controlled current source {\it $I_b$} has a linear dependence on Voltage {\it $V_b$}, of constant {\it $K_b$}. The current-controlled voltage source {\it $V_d$} has a linear dependece on current {\it $I_d$}, of constant {\it $K_d$}.These componentes that offer a linear dependence (the voltage {\it $V_b$} and the control current {\it $I_d$}) can be obtained nowing that the voltage {\it $V_b$} is the voltage drop at the ends of resistor {\it $R_3$} and the control current {\it $I_d$} is the current that passes through the resistor {\it $R_6$}.\par 
+The following equation describes how the sinuoidal voltage from source $v_s$ varies with time:
+
+\begin{figure}[h] \centering
+\includegraphics[width=0.6\linewidth]{time_step.pdf}
+\label{fig:time_step}
+\end{figure}
+
+%\begin {equation}
+%	v_s( t)  = V_s u(-t) + sin( 2 \pi f t ) u( t)
+%	\label{eq:i1}
+%\end{equation}
+ %with 
+%\begin {equation}
+%	u( t ) =  
+%	\begin{cases*} 
+%	  0 & if $t < 0$ \\
+%	1, & if $t \geq 0$
+%	\end{cases*}
+%	\label{eq:i2}
+%\end{equation}
+
+
+In this report we start by making a theoretical analysis of the circuit (Section~\ref{sec:analysis}), using the nodal analysis the circuit is analised for $t<0$ and the equivalent resistence $R_{eq}$, as seen from the capacitor terminals, is obtained. In this section both the natural and forced solutions for $V_6$ are also determined as well as the frequency responses for $V_c, V_s$ and $V_6 $. In Section~\ref{sec:simulation}, we make a virtual simulation of the circuit using Ngspice. An operating point analysis is used to analyse the circuit when $t<0$ and another one to determine the time constant. At the end of this section we take a look to node 6 to determine the natural and forced responses on this node using a transient analysis. We also perfome a frequency analysis on node 6. To complete this report we make a final conclusion (Section~\ref{sec:conclusion) where we compare the theoretical results to the results obtained by the simulation.
+
+
+\pagebreak
+
