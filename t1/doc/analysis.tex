@@ -6,22 +6,22 @@ Análise do circuito utilizando 2 processos teóricos: método das malhas e mét
 Foram criadas 4 variáveis para a aplicação do método das malhas, a correntes das malhas. Esta variáveis estão identificadas pelas letras IA, IB,IC e ID, na figura apresentada abaixo, onde também podem ser observados os sentidos utilizados. Sabendo os valores destas correntes e aplicando a lei de Ohm, são calculados os valores das correntes em cada um dos componentes e as tensões nos nós. Para determinar as 4 correntes das malhas, foram utilizadas as equações apresentadas abaixo, que foram resolvidas com o auxílio do Octave. 
 
 \begin {equation}
-	R1xIA + R3x(IA+IB) + R4x(IA+IC) = Va
+	R_1I_A + R_3(I_A+I_B) + R_4(I_A+I_C) = Va
 	\label{eq:malha1}
 \end{equation}
 
 \begin {equation}
-	R6xIA + R7xIC + R4x(IC+IA) = KcxIC
+	R_6I_A + R_7I_C + R_4(I_C+I_A) = K_cI_C
 	\label{eq:malha2}
 \end{equation}
 
 \begin {equation}
-	IB = KbxR3(IA+IB)
+	I_B = K_bR_3(I_A+I_B)
 	\label{eq:malha3}
 \end{equation}
 
 \begin {equation}
-	ID = Id
+	I_D = I_d
 	\label{eq:malha4}
 \end{equation}
 
@@ -32,40 +32,40 @@ Na aplicação do método dos nós foram considerados 9 nós, ou seja foi adicio
 
 
 \begin {equation}
-	V0 = 0
+	V_0 = 0
 	\label{eq1}
 \end{equation}
 \begin {equation}
-	V8 = V7
+	V_8 = V_7
 	\label{eqn}
 \end{equation}
 \begin {equation}
-	\frac{V2-V4}{R3} + \frac{V2-V3}{R2} + \frac{V2-V1}{R1} = 0
+	\frac{V_2-V_4}{R_3} + \frac{V_2-V_3}{R_2} + \frac{V_2-V_1}{R_1} = 0
 	\label{eq4}
 \end{equation}
 \begin {equation}
-	\frac{V1-V2}{R1} + \frac{V0 - V8}{R6} + \frac{V0 - V4}{R4} = 0
+	\frac{V_1-V_2}{R_1} + \frac{V_0 - V_8}{R_6} + \frac{V_0 - V_4}{R_4} = 0
 	\label{eq3}
 \end{equation}
 \begin {equation}
-	\frac{V5-V4}{R5} + Kb(V2-V4) = Id
+	\frac{V_5-V_4}{R_5} + K_b(V_2-V_4) = I_d
 	\label{eq6}
 
 \end{equation}
 \begin {equation}
-	\frac{V7-V6}{R7} + \frac{V7 - V0}{R6} = 0
+	\frac{V_7-V_6}{R_7} + \frac{V_7 - V_0}{R_6} = 0
 	\label{eq7}
 \end{equation}
 \begin {equation}
-	\frac{V3-V2}{R2} = Kb(V2-V4) 
+	\frac{V_3-V_2}{R_2} = K_b(V_2-V_4) 
 	\label{eq5}
 \end{equation}
 \begin {equation}
-	V1 - V0 = Va
+	V_1 - V_0 = V_a
 	\label{eq8}
 \end{equation}
 \begin {equation}
-	V4 - V6 = Kc \frac{V0 - V7}{R6}
+	V_4 - V_6 = K_c \frac{V_0 - V_7}{R_6}
 	\label{eq9}
 \end{equation}
 
