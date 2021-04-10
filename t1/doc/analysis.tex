@@ -6,7 +6,7 @@ Análise do circuito utilizando 2 processos teóricos: método das malhas e mét
 Foram criadas 4 variáveis para a aplicação do método das malhas, a correntes das malhas. Esta variáveis estão identificadas pelas letras IA, IB,IC e ID, na figura apresentada abaixo, onde também podem ser observados os sentidos utilizados. Sabendo os valores destas correntes e aplicando a lei de Ohm, são calculados os valores das correntes em cada um dos componentes e as tensões nos nós. Para determinar as 4 correntes das malhas, foram utilizadas as equações apresentadas abaixo, que foram resolvidas com o auxílio do Octave. 
 
 \begin {equation}
-	R_1I_A + R_3(I_A+I_B) + R_4(I_A+I_C) = Va
+	R_1I_A + R_3(I_A+I_B) + R_4(I_A+I_C) = V_a
 	\label{eq:malha1}
 \end{equation}
 
@@ -50,7 +50,6 @@ Na aplicação do método dos nós foram considerados 9 nós, ou seja foi adicio
 \begin {equation}
 	\frac{V_5-V_4}{R_5} + K_b(V_2-V_4) = I_d
 	\label{eq6}
-
 \end{equation}
 \begin {equation}
 	\frac{V_7-V_6}{R_7} + \frac{V_7 - V_0}{R_6} = 0
