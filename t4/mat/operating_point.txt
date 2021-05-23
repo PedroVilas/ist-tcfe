@@ -1,8 +1,0 @@
-Vbase =  4
-Vcoll =  8.8938
-Vemit =  1.5618
-Vemit2 =  9.5938
-Vin = 0
-Vin2 = 0
-Vout = 0
-Vvcc =  12
