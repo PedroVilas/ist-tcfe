@@ -87,15 +87,15 @@ endif
 diary op.tex
 diary on
 
-printf('Vbase & %.4f & %.4f & V\n', Vbase, Vbase_oct);
-printf('Vcoll & %.4f & %.4f & V\n', Vcoll, Vcoll_oct);
-printf('Vemit & %.4f & %.4f & V\n', Vemit, Vemit_oct);
-printf('Vemit2 & %.4f & %.4f & V\n', Vemit2, Vemit2_oct);
 printf('Vin & %.4f & %.4f & V\n', Vin, Vin_oct);
-printf('Vin2 & %.4f & %.4f & V\n', Vin2, Vin2_oct);
+printf('V1 & %.4f & %.4f & V\n', Vin2, Vin2_oct);
+printf('V2 & %.4f & %.4f & V\n', Vbase, Vbase_oct);
+printf('V3 & %.4f & %.4f & V\n', Vcoll, Vcoll_oct);
+printf('V4 & %.4f & %.4f & V\n', Vemit, Vemit_oct);
+printf('V5 & %.4f & %.4f & V\n', Vemit2, Vemit2_oct);
 printf('Vout & %.4f & %.4f & V\n', Vout, Vout_oct);
 printf('Vvcc & %.4f & %.4f & V\n', Vvcc, Vvcc_oct);
-printf('FAR? & %s & %s & V\n', flag, flag_oct);
+printf('FLAG & %s & %s & V\n', flag, flag_oct);
 diary off
 
 
@@ -148,14 +148,14 @@ printf('$Zi_{gain}$ & - & %d & Ohm\n', Zi1_oct);
 printf('$Zo_{gain}$ & - & %d & Ohm\n', Zo1_oct);
 printf('$Zi_{output}$ & - & %d & Ohm\n', Zi2_oct);
 printf('$Zo_{output}$ & - & %d & Ohm\n', Zo2_oct);
-printf('Cost & %d & %d & MU\n', cost, cost);
+printf('$Gain_{gainstage}$ & - & %.3f & [adimensional]\n', DATAR(8));
+printf('$Gain_{outputstage}$ & - & %.3f & [adimensional]\n', DATAR(9));
+printf('$Gain_{total}$ & %.3f & %.3f & [adimensional]\n', gain, gain_oct);
 printf('uco & %.3f & %.3f & Hz\n', uco, uco_oct);
 printf('lco & %.3f & %.3f & Hz\n', lco, lco_oct);
+printf('Cost & %d & %d & MU\n', cost, cost);
 printf('Bandwidth & %.3f & %.3f & Hz\n', bandwidth, bandwidth_oct);
-printf('$Gain_{gainstage}$ & - & %.3f & [adimensional]\n', DATAR(8));
-printf('$Gain{outputstage}$ & - & %.3f & [adimensional]\n', DATAR(9));
-printf('$Gain{total}$ & %.3f & %.3f & [adimensional]\n', gain, gain_oct);
-printf('MERIT & %.4f & %.4f & gold medals\n', MERIT, MERIT_oct);
+printf('MERIT & %.4f & %.4f & -\n', MERIT, MERIT_oct);
 diary off
 
 

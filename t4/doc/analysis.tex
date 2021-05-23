@@ -10,13 +10,10 @@ theoretically.
 \label{fig:diagram_t4}
 \end{figure}
 
-
-As explained before, in the previous section, the audio amplifier is composed of two stages. In the first stage (the gain stage) the primary objective is to amplify the voltage input signal. To do so this section will have a high gain. This stage also has a high input impedance which avoids the degradation of the input signal. The  downside of this stage is its high output impedance that makes it difficult to connect to a speaker without having the signal degrade in the exit. That is why there is an output stage. This stage will have a low output impedance which is very good because it allows us to connect to the speaker while minimizing signal degradation. When we connect the two stages the signal does not degrade very much beacause the output stage input impedance is higher than the output impedance of the gain stage, meaning little or no signal degradation in the transition between stages. This can be seen in one of the following tables. In the output stage the gain is very close to one, meaning than there will be no amplification nor attenuation of the signal.\par  
-
-The main purpose of the bypass capacitor $C_{E}$ in the gain stage is to avoid a gain loss through resistor ${R_E}$ and the main purpose of resistor ${R_E}$ is to stabilize the temperature effect. In  DC the temperature effect is most important while in AC the gain is most important . Therefore there needs to be an equilibrium. This components were placed in parallel in order to achive this equilibrium. For lower frequencies (DC) capacitor $C_{E}$ behaves like an open circuit and the current goes through resistor ${R_E}$, stabilizing the temperature effect. For higher frequencies (AC) the capacitor is a short circuit and therefore it is used to bypass the resistor $R_{E}$, avoiding lowering the gain (gain is stable in the desired passband).\par
+We are looking to the audio amplifier which is divided in two stages as was said and explained in the section before. The primary stage is the gain stage where the main goal is to amplify the voltage input signal. In order to achieve that we enforce a high gain. We also have a high input impedance in this stage which avoids the degration of the input signal. The second stage is the output stage which will have a low output impendance in order to allow us to connect to the speaker while minimizing signal degradation. That's why we have this second stage, because in the first one due to the high output impedance it's very difficult to connect to the speaker without having the signal degrade in the exit. Connecting these two stages we minimaze the downsides of which one. This can be seen in one of the following tables. In the output stage the gain is very close to one, meaning than there will be no amplification nor attenuation of the signal.\par  
 
 
-The human ear perceives frequencies between 20 Hz to 20 kHz and therefore we should chose coupling capacitors that behave like short-circuits for these frequencies, as the coupling capacitors affect the lower cutoff frequency and consequently the bandwidth. The final values considered for the circuit parameters (as named in the above figure) were the following:
+We as humans can only distingue frequencies between 20 Hz to 20 KHz and therefore we should chosed coupling capacitors that behave like short-circuits for these frequencies. We do that because the coupling capacitors interfere in the low cutoff frequency and consequently the bandwidth. The final values considered for the circuit parameters (as named in the above figure) were the following:
 
 \hfill
  \parbox{1\linewidth}{
@@ -43,9 +40,8 @@ In the following table is the operating point analysis, both for the theoretical
   \end{tabular}
   }
 \par
-The circuit used to compute the lower cutoff frequency and the gain includes the coupling capacitors, given that these are the limiting factors in terms of the lower cutoff frequency. For the upper cutoff frequency it is a little bit more complex given that this is due to the parasitic capacitances of the transistor, which are part of the Ngspice model, but were not considered in the theory.\par 
 
-The gain of the audio amplifier, the upper and lower cut off frequency, the bandwidth and the input and output impedances as well as the merit are presented in the following table, both for the theoretical analysis (right) and the Ngspice simulation (left), in order to make a side-by-side comparison.\par
+Below this text is shown a comparison between the theoretical analysis (right) and the Ngspice simulation (left).\par
 
 
 \hfill
@@ -59,15 +55,11 @@ The gain of the audio amplifier, the upper and lower cut off frequency, the band
   \end{tabular}
   }
   
-  
-There was some discrepancy here; for starters note that the input and output impedances for the intermediate stages were not simulated, they were only calculated in theory. The same goes for the gain of the intermediate stages. On a final note, the total input and output impedances of the amplifier were quite different in the two scenarios (theory vs simulation), but of the same order of magnitude; the only other significant difference was the lower cut off frequency.\par
 
 Do note that the upper cutoff frequency here used in the theoretical column was actually obtained from Ngspice: to calculate this frequency in theory, we would need to take into account the parasitic capacitances in the transistor, which proved to be quite more complex and therefore was not used.
 
 
-  The next figures present the plot of gain obtained in the theoretical analysis.
-
-%In \textbf{Table~\ref{tab:theoretical}} the values for the branch currents and the node voltages obtained from the Octave script for both methods are presented. Here, the node voltages in the mesh method were computed from the respective currents, which were determined as described in the previous subsectio
+%In \textbf{Table~\ref{tab:theoretical}} the values for the branch currents and the node voltages obtained from the Octave script for both methods are presented. Here, the node voltages in the mesh method were computed from the respective currents, which were determined as described in the previous subsection.
 
 \begin{figure}[H] \centering
 \includegraphics[width=0.6\linewidth]{gain_octave.pdf}
@@ -75,9 +67,8 @@ Do note that the upper cutoff frequency here used in the theoretical column was 
 \label{fig:gain_octa}
 \end{figure}
 
+\par This last figure represents the plot of gain obtained in the theoretical analysis.
 
 
 
 \pagebreak
-
-
