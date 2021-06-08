@@ -1,0 +1,39 @@
+\section{Introduction}
+\label{sec:introduction}
+
+
+\par In this laboratory assignment our objective was to create a BandPass Filter using an OP-AMP. This filter should have a central frequency of 1 kHz with a gain of 40dB. To implement this BandPass filter the following components were at our disposal: 
+\begin{itemize}
+
+\item One 741 OPAMP;
+\item At most three 220 nF capacitors;
+\item At most three 1 uF capacitors;
+\item At most three 1 k$\Omega$ resistors;
+\item At most three 10 k$\Omega$ resistors;
+\item At most three 100 k$\Omega$ resistors.
+
+\end{itemize} 
+
+
+\par   
+To determine the quality of the BandPass filter when compared to others, as in previous lab assignents, a merit classification system was created. This merit system took into account the cost of the components used, as well as the central frequency deviation and the gain deviation. The merit of the circuit is determined according to the following equation: 
+\begin {equation}
+	 MERIT = \frac{1}{Cost*(Gain deviation + Central Frequency deviation + 10^{-6})  }   	
+	\label{eq:i1}
+\end{equation}
+
+and the cost of the components are the following: cost of resistors = 1 monetary unit (MU) per k$\Omega$, cost of capacitors = 1 MU/uF
+and cost of transistors = 0.1 MU per transistor. 
+
+In Section~\ref{sec:analysis} it is
+presented a theoretical analysis of the circuit. In that section the circuit is analised using the suitable theoretical models studied in the class, in order to predict the input and output impedances and the gain at the central frequencies. This circuit was solved for a frequency vector in log scale with 10 points per decade, from 10Hz to 100MHz. 
+In Section~\ref{sec:simulation} using the program Ngspice, the BandPass filter is analysed by
+simulation. In Ngspice we made use of the OP-AMP model that was provided by the professor (the notorious 741 OP-AMP). The central frequency, the output voltage gain in the passband and the input and output impedances at this frequency were computed by simulation. 
+In Section~\ref{sec:conclusion}, the conclusions of this study are outlined, where the theoretical results obtained in Section~\ref{sec:analysis} are compared to the simulation results obtained in Section~\ref{sec:simulation}.
+
+
+
+
+
+\pagebreak
+
